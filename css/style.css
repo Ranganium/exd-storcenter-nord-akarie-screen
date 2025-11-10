@@ -12,6 +12,6 @@
 }
 .bg {
   position: fixed;
-  width: 100%;
+  width: auto;
   z-index: -1;
 }
