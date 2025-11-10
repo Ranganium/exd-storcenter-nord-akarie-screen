@@ -1,108 +1,169 @@
-
 :root {
-  --fish-w: 200px; 
-  --off-fish: 200px; 
+  --fish-w: 120px;
+  --off-fish: 120px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.akvarie {
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.scene {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/animeret-baggrund.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
 
-.akvarie div {
+.fisk-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.fisk-container div {
   position: absolute;
   width: var(--fish-w);
-  max-width: 28vw;
-  z-index: 1;
+  max-width: 18vw;
+  z-index: 3;
   bottom: 0;
   will-change: transform;
   transform-style: preserve-3d;
   backface-visibility: hidden;
 }
 
-.akvarie img {
+.fisk-container img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-
 .fish1 {
   bottom: 4vh;
   left: calc(-1 * var(--off-fish));
   animation: fish1 12s linear infinite;
+  animation-delay: 0s;
 }
 @keyframes fish1 {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish)));
+  }
 }
-
 
 .fish2 {
   bottom: 8vh;
   right: calc(-1 * var(--off-fish));
   animation: fish2 14s linear infinite;
+  animation-delay: 2s;
 }
 @keyframes fish2 {
-  0%   { transform: translateX(0) rotateY(180deg); }
-  100% { transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg); }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg);
+  }
 }
 
 .fish3 {
   bottom: 10vh;
   left: calc(-1 * var(--off-fish));
   animation: fish3 8s linear infinite;
+  animation-delay: 4s;
 }
 @keyframes fish3 {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish)));
+  }
 }
-
 
 .fish4 {
   bottom: 2vh;
   right: calc(-1 * var(--off-fish));
   animation: fish4 16s linear infinite;
+  animation-delay: 6s;
 }
 @keyframes fish4 {
-  0%   { transform: translateX(0) rotateY(180deg); }
-  100% { transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg); }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg);
+  }
 }
-
 
 .fish5 {
   bottom: 20vh;
   left: calc(-1 * var(--off-fish));
   animation: fish5 18s linear infinite;
+  animation-delay: 8s;
 }
 @keyframes fish5 {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish)));
+  }
 }
-
 
 .fish6 {
-  bottom: 15vh;
+  bottom: 12vh;
   right: calc(-1 * var(--off-fish));
-  animation: fish6 10s linear infinite;
+  width: var(--fish-w);
+  animation: fish6 8s linear infinite;
+  animation-delay: 0s;
 }
 @keyframes fish6 {
-  0%   { transform: translateX(0) rotateY(180deg); }
-  100% { transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg); }
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg);
+  }
 }
-
 
 .fish7 {
-  bottom: 6vh;
+  bottom: 14vh;
   left: calc(-1 * var(--off-fish));
-  width: 150px;
-  animation: fish7 9s linear infinite;
+  width: var(--fish-w);
+  animation: fish7 7s linear infinite;
+  animation-delay: 0s;
 }
 @keyframes fish7 {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish)));
+  }
 }
