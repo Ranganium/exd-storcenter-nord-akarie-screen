@@ -1,0 +1,107 @@
+:root {
+  --fish-w: 200px; 
+  --off-fish: 200px; 
+}
+
+
+.akvarie {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.akvarie div {
+  position: absolute;
+  width: var(--fish-w);
+  max-width: 28vw;
+  z-index: 1;
+  bottom: 0;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.akvarie img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.fish1 {
+  bottom: 4vh;
+  left: calc(-1 * var(--off-fish));
+  animation: fish1 12s linear infinite;
+}
+@keyframes fish1 {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+}
+
+
+.fish2 {
+  bottom: 8vh;
+  right: calc(-1 * var(--off-fish));
+  animation: fish2 14s linear infinite;
+}
+@keyframes fish2 {
+  0%   { transform: translateX(0) rotateY(180deg); }
+  100% { transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg); }
+}
+
+.fish3 {
+  bottom: 10vh;
+  left: calc(-1 * var(--off-fish));
+  animation: fish3 8s linear infinite;
+}
+@keyframes fish3 {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+}
+
+
+.fish4 {
+  bottom: 2vh;
+  right: calc(-1 * var(--off-fish));
+  animation: fish4 16s linear infinite;
+}
+@keyframes fish4 {
+  0%   { transform: translateX(0) rotateY(180deg); }
+  100% { transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg); }
+}
+
+
+.fish5 {
+  bottom: 20vh;
+  left: calc(-1 * var(--off-fish));
+  animation: fish5 18s linear infinite;
+}
+@keyframes fish5 {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+}
+
+
+.fish6 {
+  bottom: 15vh;
+  right: calc(-1 * var(--off-fish));
+  animation: fish6 10s linear infinite;
+}
+@keyframes fish6 {
+  0%   { transform: translateX(0) rotateY(180deg); }
+  100% { transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg); }
+}
+
+
+.fish7 {
+  bottom: 6vh;
+  left: calc(-1 * var(--off-fish));
+  width: 150px;
+  animation: fish7 9s linear infinite;
+}
+@keyframes fish7 {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw + var(--off-fish))); }
+}
