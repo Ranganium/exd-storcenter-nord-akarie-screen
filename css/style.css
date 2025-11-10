@@ -1,8 +1,13 @@
+* {
+  margin: 0;
+}
+
 .root {
   ...;
 }
 
 .scene {
+  margin: 0;
   width: 100%;
 }
 .bg {
