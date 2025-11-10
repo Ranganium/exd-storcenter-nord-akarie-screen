@@ -1,0 +1,12 @@
+.root {
+  ...;
+}
+
+.scene {
+  width: 100%;
+}
+.bg {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
