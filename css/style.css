@@ -2,6 +2,7 @@
 :root {
   --fish-small-w: 250px;
   --fish-big-w: 350px;
+  --off-fish4: 350px;
 }
 
 /* Reset style */
@@ -44,12 +45,11 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .fisk-container div {
   position: absolute;
-  max-width: 18vw;
   z-index: 3;
   bottom: 0;
   will-change: transform;
@@ -70,6 +70,7 @@ body {
   left: calc(-1 * var(--fish-small-w));
   animation: fish1 12s linear infinite;
   animation-delay: 0s;
+  z-index: 1;
 }
 @keyframes fish1 {
   0% {
@@ -87,6 +88,7 @@ body {
   right: calc(-1 * var(--fish-small-w));
   animation: fish2 14s linear infinite;
   animation-delay: 2s;
+  z-index: 1;
 }
 @keyframes fish2 {
   0% {
@@ -104,6 +106,7 @@ body {
   left: calc(-1 * var(--fish-big-w));
   animation: fish3 8s linear infinite;
   animation-delay: 4s;
+  z-index: 1;
 }
 @keyframes fish3 {
   0% {
@@ -116,11 +119,12 @@ body {
 
 /* Animation til pindsvinefisken */
 .fish4 {
-  bottom: 2vh;
+  bottom: 40vh;
   width: var(--fish-big-w);
   right: calc(-1 * var(--fish-big-w));
   animation: fish4 16s linear infinite;
   animation-delay: 6s;
+  z-index: 1;
 }
 @keyframes fish4 {
   0% {
@@ -138,13 +142,14 @@ body {
   left: calc(-1 * var(--fish-small-w));
   animation: fish5 18s linear infinite;
   animation-delay: 8s;
+  z-index: 1;
 }
 @keyframes fish5 {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw + var(--small-fish-w)));
+    transform: translateX(calc(100vw + var(--fish-small-w)));
   }
 }
 
@@ -154,7 +159,8 @@ body {
   width: var(--fish-big-w);
   right: calc(-1 * var(--fish-big-w));
   animation: fish6 8s linear infinite;
-  animation-delay: 0s;
+  animation-delay: 1.5s;
+  z-index: 1;
 }
 @keyframes fish6 {
   0% {
@@ -168,16 +174,17 @@ body {
 /* Animation til blå chromis */
 .fish7 {
   bottom: 14vh;
-  left: calc(-1 * var(--small-fish-w));
+  left: calc(-1 * var(--fish-small-w));
   width: var(--fish-small-w);
   animation: fish7 7s linear infinite;
-  animation-delay: 0s;
+  animation-delay: 1s;
+  z-index: 1;
 }
 @keyframes fish7 {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw + var(--small-fish-w)));
+    transform: translateX(calc(100vw + var(--fish-small-w)));
   }
 }
