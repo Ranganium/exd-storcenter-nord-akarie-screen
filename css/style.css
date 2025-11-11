@@ -233,7 +233,6 @@ body {
   animation-iteration-count: infinite;
   will-change: transform, opacity;
   width: clamp(8px, 3.5vw, 48px);
-  border: ;
 }
 
 @keyframes rise {
