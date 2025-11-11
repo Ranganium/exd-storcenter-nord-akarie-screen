@@ -261,9 +261,7 @@ body {
   z-index: 2;
   padding-inline: 0;
 }
-/* ...existing code... */
 
-/* ...existing code... */
 .bubble {
   position: absolute;
   bottom: -8vh;
@@ -302,7 +300,6 @@ body {
   }
 }
 
-/* Fordeling over hele skærmen + variation i størrelse/hastighed/forsinkelse */
 .bubble:nth-child(1) {
   left: 3%;
   width: clamp(6px, 2.5vw, 36px);
@@ -411,4 +408,4 @@ body {
   animation-duration: 11.8s;
   animation-delay: 2.8s;
 }
-/* Tilføj flere nth-child hvis du vil have flere bobler */
+
