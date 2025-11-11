@@ -188,3 +188,20 @@ body {
     transform: translateX(calc(100vw + var(--fish-small-w)));
   }
 }
+
+
+/* Akvariemanden */
+
+.akvariemanden img {
+  bottom: -1vh;
+  max-width: 65vh;
+  position: absolute;
+}
+
+.akvariemanden-open-mouth img {
+  z-index: 9;
+}
+
+.akvariemanden-closed-mouth img {
+  z-index: 10;
+}
