@@ -1,14 +1,17 @@
+/* Variabler */
 :root {
   --fish-small-w: 250px;
   --fish-big-w: 350px;
 }
 
+/* Reset style */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Baggrund og body */
 body {
   overflow: hidden;
   height: 100vh;
@@ -33,6 +36,7 @@ body {
   z-index: 1;
 }
 
+/* Fisk container */
 .fisk-container {
   position: absolute;
   top: 0;
@@ -59,6 +63,7 @@ body {
   display: block;
 }
 
+/* Animation til klovnfisk */
 .fish1 {
   bottom: 4vh;
   width: var(--fish-small-w);
@@ -75,6 +80,7 @@ body {
   }
 }
 
+/* Animation til sandspiser-gobi */
 .fish2 {
   bottom: 8vh;
   width: var(--fish-small-w);
@@ -91,6 +97,7 @@ body {
   }
 }
 
+/* Animation til rævefisken */
 .fish3 {
   bottom: 10vh;
   width: var(--fish-big-w);
@@ -107,6 +114,7 @@ body {
   }
 }
 
+/* Animation til pindsvinefisken */
 .fish4 {
   bottom: 2vh;
   width: var(--fish-big-w);
@@ -123,6 +131,7 @@ body {
   }
 }
 
+/* Animation til pudsefisken */
 .fish5 {
   bottom: 20vh;
   width: var(--fish-small-w);
@@ -139,6 +148,7 @@ body {
   }
 }
 
+/* Animation til kirurgfisken */
 .fish6 {
   bottom: 12vh;
   width: var(--fish-big-w);
@@ -155,6 +165,7 @@ body {
   }
 }
 
+/* Animation til blå chromis */
 .fish7 {
   bottom: 14vh;
   left: calc(-1 * var(--small-fish-w));
