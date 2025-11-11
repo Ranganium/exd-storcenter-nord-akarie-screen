@@ -1,8 +1,7 @@
 /* Variabler */
 :root {
-  --fish-small-w: 250px;
-  --fish-big-w: 350px;
-  --off-fish4: 350px;
+  --fish-small-w: 13vw;
+  --fish-big-w: 20vw;
 }
 
 /* Reset style */
