@@ -150,12 +150,13 @@ body {
 
 /* Animation til kirurgfisken */
 .fish6 {
-  bottom: 12vh;
+  bottom: 20vh;
   width: var(--fish-big-w);
   right: calc(-1 * var(--fish-big-w));
   animation: fish6 8s linear infinite;
   animation-delay: 1.5s;
   will-change: transform;
+  rotate: 10deg;
   z-index: 1;
 }
 @keyframes fish6 {
@@ -169,7 +170,7 @@ body {
 
 /* Animation til blå chromis */
 .fish7 {
-  bottom: 14vh;
+  bottom: 30vh;
   left: calc(-1 * var(--fish-small-w));
   width: var(--fish-small-w);
   animation: fish7 7s linear infinite;
