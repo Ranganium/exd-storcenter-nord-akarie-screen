@@ -194,14 +194,64 @@ body {
   position: absolute;
 }
 
-.akvariemanden-open-mouth img {
-  z-index: 9;
-}
-
 .akvariemanden-closed-mouth img {
   z-index: 10;
 }
 
+/* Akvariemandens tekstbokse */
+
+.akvariemand-start-tekstboks {
+  border: 1.5px solid rgb(211, 83, 15);
+  background-color: rgb(245, 203, 32);
+  max-width: fit-content;
+  padding: 2vh;
+  border-radius: 1rem;
+  position: absolute;
+  top: 90vh;
+  z-index: 12;
+  left: 5.4vw;
+  font-family: var(--font);
+  animation: pulse 2.5s infinite;
+}
+
+.akvariemand-slut-tekstboks {
+  background-color: white;
+  max-width: fit-content;
+  padding: 2vh;
+  border-radius: 1rem;
+  border: 1.5px solid black;
+  top: 76.5vh;
+  position: absolute;
+  z-index: 13;
+  left: 20vw;
+  font-family: var(--font);
+  opacity: 0;
+}
+
+/* Laver en klasse der gør "klik på mig" knappen usynlig */
+.akvariemand-start-tekstboks.is-not-visible {
+  opacity: 0;
+}
+
+/* Animation til "klik på mig" knappen */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Laver en klasse der gør akvariemandens slut tekstboks synlig */
+.akvariemand-slut-tekstboks.is-visible {
+  opacity: 1;
+}
 .bubbles {
   position: fixed; /* dækker hele viewport */
   inset: 0; /* top:0; right:0; bottom:0; left:0; */
