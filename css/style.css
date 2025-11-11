@@ -1,46 +1,39 @@
 :root {
-  --fish-w: 100px;
-  --off-fish: 100px;
+  --fish-w: 120px;
+  --off-fish: 120px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-body);
 }
 
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
 .scene {
-  max-height: 1848px;
-}
-
-.bg {
-  position: absolute;
-  inset: auto 0 0 0;
-  width: 100%;
-  height: 100%;
-  background-size: 100vw auto;
-}
-
-/* Flyt hele flisen en view-port til venstre */
-@keyframes animateBg {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: -100vw;
-  }
-}
-
-.fish {
   position: relative;
-  z-index: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-.akvarie {
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.fisk-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -50,10 +43,10 @@
   overflow: hidden;
 }
 
-.akvarie div {
+.fisk-container div {
   position: absolute;
   width: var(--fish-w);
-  max-width: 28vw;
+  max-width: 18vw;
   z-index: 3;
   bottom: 0;
   will-change: transform;
@@ -61,7 +54,7 @@
   backface-visibility: hidden;
 }
 
-.akvarie img {
+.fisk-container img {
   width: 100%;
   height: auto;
   display: block;
@@ -71,7 +64,7 @@
   bottom: 4vh;
   left: calc(-1 * var(--off-fish));
   animation: fish1 12s linear infinite;
-  cursor: pointer;
+  animation-delay: 0s;
 }
 @keyframes fish1 {
   0% {
@@ -86,7 +79,7 @@
   bottom: 8vh;
   right: calc(-1 * var(--off-fish));
   animation: fish2 14s linear infinite;
-  cursor: pointer;
+  animation-delay: 2s;
 }
 @keyframes fish2 {
   0% {
@@ -101,7 +94,7 @@
   bottom: 10vh;
   left: calc(-1 * var(--off-fish));
   animation: fish3 8s linear infinite;
-  cursor: pointer;
+  animation-delay: 4s;
 }
 @keyframes fish3 {
   0% {
@@ -116,7 +109,7 @@
   bottom: 2vh;
   right: calc(-1 * var(--off-fish));
   animation: fish4 16s linear infinite;
-  cursor: pointer;
+  animation-delay: 6s;
 }
 @keyframes fish4 {
   0% {
@@ -131,7 +124,7 @@
   bottom: 20vh;
   left: calc(-1 * var(--off-fish));
   animation: fish5 18s linear infinite;
-  cursor: pointer;
+  animation-delay: 8s;
 }
 @keyframes fish5 {
   0% {
@@ -143,10 +136,11 @@
 }
 
 .fish6 {
-  bottom: 15vh;
+  bottom: 12vh;
   right: calc(-1 * var(--off-fish));
-  animation: fish6 10s linear infinite;
-  cursor: pointer;
+  width: var(--fish-w);
+  animation: fish6 8s linear infinite;
+  animation-delay: 0s;
 }
 @keyframes fish6 {
   0% {
@@ -158,11 +152,11 @@
 }
 
 .fish7 {
-  bottom: 6vh;
+  bottom: 14vh;
   left: calc(-1 * var(--off-fish));
-  width: 150px;
-  animation: fish7 9s linear infinite;
-  cursor: pointer;
+  width: var(--fish-w);
+  animation: fish7 7s linear infinite;
+  animation-delay: 0s;
 }
 @keyframes fish7 {
   0% {
