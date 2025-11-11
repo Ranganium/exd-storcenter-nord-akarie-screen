@@ -33,7 +33,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: -1;
 }
 
 /* Fisk container */
@@ -180,4 +180,21 @@ body {
   100% {
     transform: translateX(calc(100vw + var(--small-fish-w)));
   }
+}
+
+
+/* Akvariemanden */
+
+.akvariemanden img {
+  bottom: -1vh;
+  max-width: 65vh;
+  position: absolute;
+}
+
+.akvariemanden-open-mouth img {
+  z-index: 9;
+}
+
+.akvariemanden-closed-mouth img {
+  z-index: 10;
 }
