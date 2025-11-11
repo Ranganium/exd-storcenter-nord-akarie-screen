@@ -27,7 +27,6 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/animeret-baggrund.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -167,3 +166,4 @@ body {
     transform: translateX(calc(100vw + var(--off-fish)));
   }
 }
+
