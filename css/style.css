@@ -1,6 +1,6 @@
 :root {
-  --fish-w: 250px;
-  --off-fish: 120px;
+  --fish-small-w: 250px;
+  --fish-big-w: 350px;
 }
 
 * {
@@ -45,7 +45,6 @@ body {
 
 .fisk-container div {
   position: absolute;
-  width: var(--fish-w);
   max-width: 18vw;
   z-index: 3;
   bottom: 0;
@@ -62,7 +61,8 @@ body {
 
 .fish1 {
   bottom: 4vh;
-  left: calc(-1 * var(--off-fish));
+  width: var(--fish-small-w);
+  left: calc(-1 * var(--fish-small-w));
   animation: fish1 12s linear infinite;
   animation-delay: 0s;
 }
@@ -71,13 +71,14 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw + var(--off-fish)));
+    transform: translateX(calc(100vw + var(--fish-small-w)));
   }
 }
 
 .fish2 {
   bottom: 8vh;
-  right: calc(-1 * var(--off-fish));
+  width: var(--fish-small-w);
+  right: calc(-1 * var(--fish-small-w));
   animation: fish2 14s linear infinite;
   animation-delay: 2s;
 }
@@ -86,13 +87,14 @@ body {
     transform: translateX(0) rotateY(180deg);
   }
   100% {
-    transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg);
+    transform: translateX(calc(-100vw - var(--fish-small-w))) rotateY(180deg);
   }
 }
 
 .fish3 {
   bottom: 10vh;
-  left: calc(-1 * var(--off-fish));
+  width: var(--fish-big-w);
+  left: calc(-1 * var(--fish-big-w));
   animation: fish3 8s linear infinite;
   animation-delay: 4s;
 }
@@ -101,13 +103,14 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw + var(--off-fish)));
+    transform: translateX(calc(100vw + var(--fish-big-w)));
   }
 }
 
 .fish4 {
   bottom: 2vh;
-  right: calc(-1 * var(--off-fish));
+  width: var(--fish-big-w);
+  right: calc(-1 * var(--fish-big-w));
   animation: fish4 16s linear infinite;
   animation-delay: 6s;
 }
@@ -116,13 +119,14 @@ body {
     transform: translateX(0) rotateY(180deg);
   }
   100% {
-    transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg);
+    transform: translateX(calc(-100vw - var(--fish-big-w))) rotateY(180deg);
   }
 }
 
 .fish5 {
   bottom: 20vh;
-  left: calc(-1 * var(--off-fish));
+  width: var(--fish-small-w);
+  left: calc(-1 * var(--fish-small-w));
   animation: fish5 18s linear infinite;
   animation-delay: 8s;
 }
@@ -131,14 +135,14 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw + var(--off-fish)));
+    transform: translateX(calc(100vw + var(--small-fish-w)));
   }
 }
 
 .fish6 {
   bottom: 12vh;
-  right: calc(-1 * var(--off-fish));
-  width: var(--fish-w);
+  width: var(--fish-big-w);
+  right: calc(-1 * var(--fish-big-w));
   animation: fish6 8s linear infinite;
   animation-delay: 0s;
 }
@@ -147,14 +151,14 @@ body {
     transform: translateX(0) rotateY(180deg);
   }
   100% {
-    transform: translateX(calc(-100vw - var(--off-fish))) rotateY(180deg);
+    transform: translateX(calc(-100vw - var(--fish-big-w))) rotateY(180deg);
   }
 }
 
 .fish7 {
   bottom: 14vh;
-  left: calc(-1 * var(--off-fish));
-  width: var(--fish-w);
+  left: calc(-1 * var(--small-fish-w));
+  width: var(--fish-small-w);
   animation: fish7 7s linear infinite;
   animation-delay: 0s;
 }
@@ -163,7 +167,6 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(100vw + var(--off-fish)));
+    transform: translateX(calc(100vw + var(--small-fish-w)));
   }
 }
-
