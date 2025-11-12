@@ -175,3 +175,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const klovnFisk = document.getElementById("klovnfisk");
+const sandspiserFisk = document.getElementById("sandspiser");
+const raeveFisk = document.getElementById("raevefisk");
+const pindsvinFisk = document.getElementById("pindsvinfisk");
+const pudseFisk = document.getElementById("pudsefisk");
+const kirurgFisk = document.getElementById("kirugfisk");
+const blueChromisFisk = document.getElementById("blue-chromisfisk");
+
+if (klovnFisk) {
+  klovnFisk.addEventListener("click", () => {
+    klovnFisk.classList.remove("anim-scale");
+    void klovnFisk.offsetWidth;
+    klovnFisk.classList.add("anim-scale");
+  });
+}
