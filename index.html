@@ -8,32 +8,43 @@
     />
     <title>akvarie</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-
     <!-- Baggrund -->
     <section class="scene">
       <img src="img/animeret-baggrund.gif" alt="hav" class="bg" />
       <div class="sun"></div>
 
- <!-- BOBLER -->
+      <!-- BOBLER -->
       <div class="bubbles">
-        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
-        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
-        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
-        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
-        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
-        <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
       </div>
-
 
       <!-- Fisk container -->
       <div class="fisk-container">
-
         <img
           src="img/klovnfisk.png"
           alt="klovnfisk"
@@ -82,7 +93,7 @@
         <figure class="akvariemanden-closed-mouth">
           <img
             src="img/akvariemanden-lukket-mund.png"
-            alt="akvariemanden med lukket mund"
+            alt="akavriemanden med lukket mund"
             id="akvariemanden-closed-mouth"
           />
         </figure>
@@ -94,12 +105,23 @@
           />
         </figure>
       </div>
+
       <!-- Akvariemanden tekstbokse -->
       <div class="akvariemand-start-tekstboks">
-        <p id="start-tekstboks"> Klik på mig!</p>
+        <p id="start-tekstboks">Klik på mig!</p>
       </div>
       <div class="akvariemand-slut-tekstboks">
-        <p id="slut-tekstboks">Hej med jer! <br> Velkommen til akvariet i Storcenter Nord. <br> Her i akvariet finder I mine venner der svømmer rundt bag mig. Du kan klikke på mine fiske-venner for at lære mere om dem. <br> Kan du for eksempel finde min orange klovnfiske-ven?</p>
+        <p id="slut-tekstboks">
+          Hej med jer! <br />
+          Velkommen til akvariet i Storcenter Nord. <br />
+          Her i akvariet kan i finde mine venner der svømmer rundt bag mig. Du
+          kan klikke på mine fiske-venner for at lære mere om dem. <br />
+          Kan du for eksempel finde min orange klovnfiske-ven?
+        </p>
+      </div>
+      <div id="tooltip" class="tooltip">
+        <button class="close-btn"></button>
+        <div class="tooltip-content"></div>
       </div>
     </section>
 
