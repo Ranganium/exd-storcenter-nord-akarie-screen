@@ -186,8 +186,9 @@ const blueChromisFisk = document.getElementById("blue-chromisfisk");
 
 if (klovnFisk) {
   klovnFisk.addEventListener("click", () => {
-    klovnFisk.classList.remove("anim-scale");
-    void klovnFisk.offsetWidth;
-    klovnFisk.classList.add("anim-scale");
+    const wrapper = klovnFisk.closest(".fish-wrapper");
+    wrapper.classList.remove("anim-scale");
+    void wrapper.offsetWidth;
+    wrapper.classList.add("anim-scale");
   });
 }

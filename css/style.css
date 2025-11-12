@@ -48,7 +48,7 @@ body {
 }
 
 /* Fælles stil for alle fisk */
-.fisk-container img {
+.fisk-container div img {
   position: absolute;
   height: auto;
   display: block;
