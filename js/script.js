@@ -8,7 +8,7 @@ const akvariemandTaleBoks = document.querySelector(".akvariemand-slut-tekstboks"
 const akvarieMandenSound = new Audio();
 akvarieMandenSound.src = "../audio/akvariemand-introduktion-audio.mp3";
 
-// Afspiller snakke animation og lyd til akvariemanden når man klikker på akvariemanden
+// Afspiller snakke animation og lyd til akvariemanden når man klikker på ham
 if (akvarieMandenClosedImg) {
     akvarieMandenClosedImg.addEventListener("click", () => {
        akvarieMandenClosedImg.src = "../video/akvariemanden-gif.gif";

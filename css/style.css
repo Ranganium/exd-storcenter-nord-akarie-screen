@@ -80,7 +80,7 @@ body {
   bottom: 50vh;
   width: var(--fish-small-w);
   right: calc(-1 * var(--fish-small-w));
-  animation: fish2 9s linear infinite;
+  animation: fish2 14s linear infinite;
   animation-delay: 2s;
   will-change: transform;
   rotate: 5deg;
@@ -138,7 +138,7 @@ body {
   bottom: 20vh;
   width: var(--fish-small-w);
   left: calc(-1 * var(--fish-small-w));
-  animation: fish5 10s linear infinite;
+  animation: fish5 18s linear infinite;
   animation-delay: 8s;
   z-index: 1;
 }
@@ -157,7 +157,7 @@ body {
   width: var(--fish-big-w);
   right: calc(-1 * var(--fish-big-w));
   animation: fish6 8s linear infinite;
-  animation-delay: 4s;
+  animation-delay: 1.5s;
   will-change: transform;
   rotate: 10deg;
   z-index: 3;
@@ -177,7 +177,7 @@ body {
   left: calc(-1 * var(--fish-small-w));
   width: var(--fish-small-w);
   animation: fish7 7s linear infinite;
-  animation-delay: 4s;
+  animation-delay: 1s;
   z-index: 1;
 }
 @keyframes fish7 {
