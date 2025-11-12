@@ -2,6 +2,7 @@
 :root {
   --fish-small-w: 13vw;
   --fish-big-w: 20vw;
+  --font: andika;
 }
 
 /* Reset style */
@@ -418,8 +419,8 @@ body {
 /* anne-sofie har lavet css til tooltip */
 .tooltip {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 42%;
+  left: 65%;
   transform: translate(-50%, -50%);
   background-image: url("../img/tekstbobbel.png");
   background-size: contain;
@@ -447,6 +448,7 @@ body {
 .tooltip-content {
   color: #333;
   font-weight: bold;
+  font-family: var(--font);
 }
 
 .tooltip-content h3 {
@@ -466,12 +468,13 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-  background: none;
-  border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #666;
   font-weight: bold;
+  border: 1.5px solid rgb(211, 83, 15);
+  background-color: rgb(245, 203, 32);
+  padding: 1vh;
+  border-radius: 0.5rem;  
 }
 
 .anim-scale {
@@ -488,4 +491,41 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+
+/* Styling til de fisk der dukker op når man klikker på dem */
+.info-fish img {
+  width: 25vw;
+  position: absolute;
+  top: 70vh;
+  left: 30vw;
+  z-index: 11;
+  opacity: 0;
+}
+
+#sandspiser-info {
+ top: 51vh;
+}
+
+
+#raevefisk-info {
+  width: 30vw;
+  left: 28vw;
+}
+
+
+#pindsvinefisk-info {
+  top: 57vh;
+}
+
+
+#kirurgfisk-info {
+  rotate: -10deg;
+  top: 65vh;
+}
+
+
+#blue-chromis-info {
+  top: 65vh;
 }
