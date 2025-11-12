@@ -203,26 +203,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-const klovnFisk = document.getElementById("klovnfisk");
-const sandspiserFisk = document.getElementById("sandspiser");
-const raeveFisk = document.getElementById("raevefisk");
-const pindsvinFisk = document.getElementById("pindsvinfisk");
-const pudseFisk = document.getElementById("pudsefisk");
-const kirurgFisk = document.getElementById("kirugfisk");
-const blueChromisFisk = document.getElementById("blue-chromisfisk");
-
-// if (klovnFisk) {
-//   klovnFisk.addEventListener("click", () => {
-//     const wrapper = klovnFisk.closest(".fish-wrapper");
-//     wrapper.classList.remove("anim-scale");
-//     void wrapper.offsetWidth;
-//     wrapper.classList.add("anim-scale");
-//   });
-// }
-
-if(klovnfisk) {
-  klovnFisk.addEventListener("click", () => {
-
-  })
-}
