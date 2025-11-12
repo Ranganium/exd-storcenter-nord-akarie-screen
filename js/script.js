@@ -8,6 +8,10 @@ const akvariemandTaleBoks = document.querySelector(
   ".akvariemand-slut-tekstboks"
 );
 
+// Variabel til lyden der spiller når fiskene snakker
+// Vi bruger let så vi kan ændre dens værdi senere
+let fishSpeak = null;
+
 // Henter lyden til akvariemanden
 const akvarieMandenSound = new Audio();
 akvarieMandenSound.src = "../audio/akvariemand-introduktion-audio.mp3";
@@ -87,6 +91,7 @@ const fishInfo = [
     className: "fish1",
     name: "Klovnfisk",
     imgId: "klovnfisk-info",
+    fishAudioSrc: "../audio/klovnefisk.mp3",
     info1:
       "Hej! Jeg hedder Klovnfisk, og jeg bor i de varme koralhave omkring Australien og Indonesien. Jeg elsker at gemme mig i min søanemone, som beskytter mig med sine giftige arme, men den stikker ikke mig, for vi er bedste venner!",
     info2:
@@ -96,6 +101,7 @@ const fishInfo = [
     className: "fish2",
     name: "Sandspiser-gobi",
     imgId: "sandspiser-info",
+    fishAudioSrc: "../audio/sandspiser-gobi.mp3",
     info1:
       "Jeg hedder Sandspiser-gobi, og jeg bor på sandbunden i koralrevene i Stillehavet og Det Indiske Ocean. Jeg elsker at suge sand ind, spise de små dyr, der gemmer sig deri og så spytter jeg det rene sand ud igen!",
     info2:
@@ -105,8 +111,9 @@ const fishInfo = [
     className: "fish3",
     name: "Rævefjæs",
     imgId: "raevefisk-info",
+    fishAudioSrc: "../audio/raevefjaes.mp3",
     info1:
-      "Jeg hedder Rævefjæs og ja, mit ansigt ligner en ræv! Jeg bor i Stillehavet ved Australien og Filippinerne, hvor jeg svømmer rundt på koralrev.",
+      "Jeg hedder Rævefjæs og ja, mit ansigt ligner en ræv! Jeg bor i Stillehavet tæt på Australien og Filippinerne, hvor jeg svømmer rundt mellem koralrevene.",
     info2:
       "Jeg spiser alger og havplanter, så jeg hjælper med at holde revet rent. Men pas på mine finner — de har giftige pigge, så ingen tør røre mig",
   },
@@ -114,6 +121,7 @@ const fishInfo = [
     className: "fish4",
     name: "Pindsvinefisk",
     imgId: "pindsvinefisk-info",
+    fishAudioSrc: "../audio/pindsvinefisk.mp3",
     info1:
       "Hej du! Jeg er en Pindsvinefisk, og jeg bor i varme have som Caribien og Det Røde Hav. Hvis nogen prøver at fange mig, puster jeg mig op som en stor ballon med pigge",
     info2:
@@ -123,6 +131,7 @@ const fishInfo = [
     className: "fish5",
     name: "Pudsefisk",
     imgId: "pudsefisk-info",
+    fishAudioSrc: "../audio/pudsefisken.mp3",
     info1:
       "Hej, jeg er en Pudsefisk — havets egen frisør! Jeg bor på tropiske koralrev, og mit job er at rense de andre fisk.",
     info2:
@@ -132,6 +141,7 @@ const fishInfo = [
     className: "fish6",
     name: "Kirurgfisk",
     imgId: "kirurgfisk-info",
+    fishAudioSrc: "../audio/kirurgfisk.mp3",
     info1:
       'Jeg er en Kirurgfisk, og jeg bor i de varme koralhave i Stillehavet. Jeg har små, skarpe "knive" ved min hale derfor kalder de mig kirurg! Men bare rolig, jeg bruger dem kun, hvis jeg skal forsvare mig.',
     info2:
@@ -141,6 +151,7 @@ const fishInfo = [
     className: "fish7",
     name: "Blå Chromis",
     imgId: "blue-chromis-info",
+    fishAudioSrc: "../audio/blue-chromis.mp3",
     info1:
       "Halløj! Jeg er en Blå Chromis, og jeg bor på de farverige koralrev i Caribien. Jeg er lille, hurtig og skinner som et blåt lyn i vandet!",
     info2:
@@ -173,6 +184,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (fishImg) {
         fishImg.style.opacity = 1;
       }
+
+        if(fishData.fishAudioSrc) {
+
+          if(fishSpeak) {
+            // Pause gør at hvis man klikker på en anden fisk, før lyden er færdig med at spille,
+            // pauser den den nuværende lyd og den nye afspilles.
+            fishSpeak.pause();
+            // CurrentTime sørger for at lydfilen starter fra begyndelsen.
+            fishSpeak.currentTime = 0;
+          }
+          // Henter lydfilen defineret i array
+          fishSpeak = new Audio(fishData.fishAudioSrc);
+          fishSpeak.play();
+        }
     }
   }
 
@@ -185,6 +210,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".info-fish img").forEach(img => {
     img.style.opacity = 0;
   });
+
+  if(fishSpeak) {
+    // Pause stopper lyden
+    fishSpeak.pause();
+    // Rydder variablen fishSpeak, det signalerer at der ikke længere spilles en lyd
+    // Det sørger for at vi kan bruge samme variabel til forskellige audio-filer
+    fishSpeak = null;
+  }
   }
 
 
@@ -203,3 +236,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// Skrue ned for baggrundslyden
+const backgroundAudio = document.getElementById("underwater-sound");
+backgroundAudio.volume = 0.7;
