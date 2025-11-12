@@ -3,7 +3,6 @@
 
 HTML
 <!-- Div klasserne med "akvariemanden" - IDA -->
-<<<<<<< HEAD
 <!-- Div klasserne med "boblerne" - MARIA -->
 
 CSS
@@ -13,7 +12,6 @@ CSS
 JS
 <!-- Animation til akvariemanden - IDA -->
 <!-- Animation til Boblerne - MARIA -->
-=======
 <!-- Dic klasserne med tekstboks - IDA -->
 
 CSS
@@ -23,4 +21,3 @@ CSS
 JS
 <!-- Animation og lyd til akvariemanden - IDA -->
 <!-- "klik på mig" knappens funktion - IDA -->
->>>>>>> d484f8c6afc4d33986d8dce170787e528b6e99bb

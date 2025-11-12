@@ -75,6 +75,7 @@ body {
 
 /* Animation til sandspiser-gobi */
 .fish2 {
+  position: absolute;
   bottom: 50vh;
   width: var(--fish-small-w);
   right: calc(-1 * var(--fish-small-w));
@@ -95,6 +96,7 @@ body {
 
 /* Animation til rævefisken */
 .fish3 {
+  position: absolute;
   bottom: 10vh;
   width: var(--fish-big-w);
   left: calc(-1 * var(--fish-big-w));
@@ -114,6 +116,7 @@ body {
 
 /* Animation til pindsvinefisken */
 .fish4 {
+  position: absolute;
   bottom: 65vh;
   width: var(--fish-big-w);
   right: calc(-1 * var(--fish-big-w));
@@ -133,6 +136,7 @@ body {
 
 /* Animation til pudsefisken */
 .fish5 {
+  position: absolute;
   bottom: 20vh;
   width: var(--fish-small-w);
   left: calc(-1 * var(--fish-small-w));
@@ -151,6 +155,7 @@ body {
 
 /* Animation til kirurgfisken */
 .fish6 {
+  position: absolute;
   bottom: 20vh;
   width: var(--fish-big-w);
   right: calc(-1 * var(--fish-big-w));
@@ -171,6 +176,7 @@ body {
 
 /* Animation til blå chromis */
 .fish7 {
+  position: absolute;
   bottom: 30vh;
   left: calc(-1 * var(--fish-small-w));
   width: var(--fish-small-w);
