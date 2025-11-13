@@ -30,7 +30,7 @@ if (akvarieMandenClosedImg) {
 
     // Stopper snakke animationen efter 16 sekunder
     setTimeout(() => {
-      akvarieMandenClosedImg.src = "../img/akvariemanden-lukket-mund.png";
+      akvarieMandenClosedImg.src = "img/akvariemanden-lukket-mund.png";
       // Gør "klik på mig" knappen synlig når han er færdig med at snakke
       klikMigBtn.classList.remove("is-not-visible");
 
