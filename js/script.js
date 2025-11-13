@@ -14,7 +14,7 @@ let fishSpeak = null;
 
 // Henter lyden til akvariemanden
 const akvarieMandenSound = new Audio();
-akvarieMandenSound.src = "../audio/akvariemand-introduktion-audio.mp3";
+akvarieMandenSound.src = "audio/akvariemand-introduktion-audio.mp3";
 
 // Afspiller snakke animation og lyd til akvariemanden når man klikker på ham
 if (akvarieMandenClosedImg) {
@@ -241,3 +241,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // Skrue ned for baggrundslyden
 const backgroundAudio = document.getElementById("underwater-sound");
 backgroundAudio.volume = 0.7;
+
+// Laver en variable til at starte baggrundslyden , da man ikke må bruge autoplay
+const startBgAudio = () => {
+  backgroundAudio.play();
+};
+
+// Starter baggrundslyden når man klikker et vilkårligt sted på skærmen
+document.addEventListener("click", startBgAudio);
