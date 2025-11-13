@@ -19,7 +19,7 @@ akvarieMandenSound.src = "audio/akvariemand-introduktion-audio.mp3";
 // Afspiller snakke animation og lyd til akvariemanden når man klikker på ham
 if (akvarieMandenClosedImg) {
   akvarieMandenClosedImg.addEventListener("click", () => {
-    akvarieMandenClosedImg.src = "../video/akvariemanden-gif.gif";
+    akvarieMandenClosedImg.src = "video/akvariemanden-gif.gif";
     akvarieMandenSound.play();
 
     // Gør "klik på mig" knappen usynlig mens han snakker
